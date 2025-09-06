@@ -2,8 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>Hello</h1>
-    </div>
+    <main>
+      <section className="hero">
+        <div className="hero-content">
+          <h1 className="text-4xl">Helll</h1>
+        </div>
+      </section>
+    </main>
   );
 }
