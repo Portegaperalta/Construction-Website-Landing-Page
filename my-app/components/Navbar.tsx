@@ -1,12 +1,11 @@
+"use client"
+
+import { useState } from "react"
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 
 type item = {
@@ -31,7 +30,8 @@ export default function Navbar() {
               key={item.name}
               className="cursor-pointer"
             >
-              <NavigationMenuLink>
+              <NavigationMenuLink
+                className="text-white text-[1.1rem]">
                 {item.name}
               </NavigationMenuLink>
             </NavigationMenuItem>
