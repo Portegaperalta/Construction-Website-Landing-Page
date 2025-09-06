@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: "500",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"]
 })
 
 export const metadata: Metadata = {
@@ -19,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <body
-        className={` ${poppins.variable}`}
+        className={` ${poppins.className}`}
       >
         <Header />
         {children}

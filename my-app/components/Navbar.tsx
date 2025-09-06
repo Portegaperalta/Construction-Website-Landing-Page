@@ -21,6 +21,8 @@ const items: item[] = [
 ]
 
 export default function Navbar() {
+  const [isActive, setIsActive] = useState(false)
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -31,7 +33,7 @@ export default function Navbar() {
               className="cursor-pointer"
             >
               <NavigationMenuLink
-                className="text-white text-[1.1rem]">
+                className="text-white text-[1.1rem] hover:text-white hover:bg-transparent">
                 {item.name}
               </NavigationMenuLink>
             </NavigationMenuItem>
